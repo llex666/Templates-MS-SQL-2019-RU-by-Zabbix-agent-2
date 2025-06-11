@@ -298,7 +298,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Database pages</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Страниц баз данных&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Страниц базы данных&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -2117,7 +2117,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Страниц баз данных&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Страниц базы данных&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
