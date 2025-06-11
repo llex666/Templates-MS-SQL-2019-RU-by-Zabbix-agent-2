@@ -1,4 +1,4 @@
-Шаблон для мониторинга MS SQL Server 2019 by Zabbix agent 2
+Шаблон для мониторинга русской версии MS SQL Server 2019 через Zabbix agent 2
 
 
 
