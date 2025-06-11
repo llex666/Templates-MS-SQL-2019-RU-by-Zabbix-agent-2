@@ -1,5 +1,8 @@
 Шаблон для мониторинга русской версии MS SQL Server 2019 через Zabbix agent 2
 
+за основу взята статья для англиской версии MS SQL 2019
+https://internet-lab.ru/zabbix_template_mssql_2019
+
 
 
 Установка
