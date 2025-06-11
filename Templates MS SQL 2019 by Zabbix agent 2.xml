@@ -2095,13 +2095,13 @@ NULL</description>
     </templates>
     <triggers>
         <trigger>
-            <expression>{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:Access Methods\Перенаправленных записей в секунду&quot;].last()}&gt;{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:SQL Statistics\Пакетных запросов в секунду/sec&quot;].last()}/10</expression>
+            <expression>{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:Access Methods\Перенаправленных записей в секунду&quot;].last()}&gt;{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:SQL Statistics\Пакетных запросов в секунду&quot;].last()}/10</expression>
             <name>SQL Server, Access Methods: Forwarded Records/sec on {HOST.NAME}</name>
             <status>DISABLED</status>
             <priority>AVERAGE</priority>
         </trigger>
         <trigger>
-            <expression>{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:Access Methods\Page Splits/sec&quot;].last()}&gt;{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:SQL Statistics\Пакетных запросов в секунду/sec&quot;].last()}/5</expression>
+            <expression>{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:Access Methods\Разбиений страниц в секунду&quot;].last()}&gt;{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:SQL Statistics\Пакетных запросов в секунду&quot;].last()}/5</expression>
             <name>SQL Server, Access Methods: Page Splits/Sec on {HOST.NAME}</name>
             <status>DISABLED</status>
             <priority>AVERAGE</priority>
@@ -2117,7 +2117,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Database pages&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Страниц баз данных&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2125,7 +2125,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Target pages&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Целевые страницы&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2139,7 +2139,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page life expectancy&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Время без ссылки для страницы расширения&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2153,7 +2153,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page lookups/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Поисков страниц в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2161,7 +2161,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page reads/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Количество операций чтения страниц в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2169,7 +2169,7 @@ NULL</description>
                     <color>0000C8</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page writes/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Операций записи страниц в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2177,7 +2177,7 @@ NULL</description>
                     <color>C800C8</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Readahead pages/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Предварительно прочитанных страниц в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2185,7 +2185,7 @@ NULL</description>
                     <color>FC6EA3</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Checkpoint pages/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Страниц контрольных точек в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2193,7 +2193,7 @@ NULL</description>
                     <color>6C59DC</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Free list stalls/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Остановов свободного списка в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2201,7 +2201,7 @@ NULL</description>
                     <color>AC8C14</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Lazy writes/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Операций медл. записи в секунду&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2215,7 +2215,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Auto-Param Attempts/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Попыток автоматически установить параметры в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2223,7 +2223,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Failed Auto-Params/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Сбойных автоматических установок параметров в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2231,7 +2231,7 @@ NULL</description>
                     <color>0000C8</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Safe Auto-Params/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Безопасных автоматических параметров в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2239,7 +2239,7 @@ NULL</description>
                     <color>C800C8</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Unsafe Auto-Params/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Небезопасных автоматических параметров в секунду&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2261,7 +2261,7 @@ NULL</description>
                     <color>F63100</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Access Methods\Full Scans/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Access Methods\Полных операций сканирования в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2269,7 +2269,7 @@ NULL</description>
                     <color>2774A4</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Access Methods\Index Searches/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Access Methods\Операций поиска по индексу в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2277,7 +2277,7 @@ NULL</description>
                     <color>A54F10</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Access Methods\Page Splits/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Access Methods\Разбиений страниц в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2285,7 +2285,7 @@ NULL</description>
                     <color>FC6EA3</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Access Methods\Workfiles Created/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Access Methods\Создано рабочих файлов в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2293,7 +2293,7 @@ NULL</description>
                     <color>6C59DC</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Access Methods\Worktables Created/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Access Methods\Создано рабочих таблиц в секунду&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2307,7 +2307,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Object Counts&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Кол-во объектов кэша&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2315,7 +2315,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Objects in use&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Объектов кэша в использовании&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2323,7 +2323,7 @@ NULL</description>
                     <color>2774A4</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Pages&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Страниц кэша&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2337,7 +2337,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\SQL Compilations/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Компиляций SQL в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2345,7 +2345,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\SQL Re-Compilations/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Рекомпиляций SQL в секунду&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2359,7 +2359,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Buffer cache hit ratio&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Buffer Manager\Коэффициент обращений к буферному кэшу&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2367,7 +2367,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\Process(sqlservr)\% Processor Time&quot;]</key>
+                        <key>perf_counter[&quot;\Process(sqlservr)\% Загруженности процессора&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2375,7 +2375,7 @@ NULL</description>
                     <color>0000C8</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Hit Ratio&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Коэффициент обращений к буферному кэшу&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2389,7 +2389,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Errors(_Total)\Errors/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Errors(_Total)\Ошибок в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2397,7 +2397,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Errors(DB Offline Errors)\Errors/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Errors(DB Offline Errors)\Ошибок в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2405,7 +2405,7 @@ NULL</description>
                     <color>0000C8</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Errors(Info Errors)\Errors/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Errors(Info Errors)\Ошибок в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2413,7 +2413,7 @@ NULL</description>
                     <color>C800C8</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Errors(Kill Connection Errors)\Errors/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Errors(Kill Connection Errors)\Ошибок в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2421,7 +2421,7 @@ NULL</description>
                     <color>00C8C8</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Errors(User Errors)\Errors/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Errors(User Errors)\Ошибок в секунду&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2435,7 +2435,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Requests/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Запросов блокировок в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2443,7 +2443,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Timeouts/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Превышений времени ожидания блокировки в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2451,7 +2451,7 @@ NULL</description>
                     <color>0000C8</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Number of Deadlocks/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Количество взаимоблокировок в секунду&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2465,7 +2465,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:General Statistics\Logins/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:General Statistics\Входов в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2473,7 +2473,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:General Statistics\Logouts/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:General Statistics\Выходов в секунду&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2486,7 +2486,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Memory Grants Outstanding&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Ожидается выделений памяти&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2494,7 +2494,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Memory Grants Pending&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Ожидается выделений памяти&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2522,7 +2522,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:General Statistics\Processes blocked&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:General Statistics\Заблокированных процессов&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2536,7 +2536,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Target Server Memory (KB)&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Память целевого сервера (КБ)&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2544,7 +2544,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Total Server Memory (KB)&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Memory Manager\\Общая память сервера (КБ)&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2568,7 +2568,7 @@ NULL</description>
                     <color>FC6EA3</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Granted Workspace Memory (KB)&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Выделено памяти рабочей области (КБ)&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2576,7 +2576,7 @@ NULL</description>
                     <color>6C59DC</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Maximum Workspace Memory (KB)&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Memory Manager\Максимальный объем рабочей области (КБ)&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2598,7 +2598,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Transactions/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Транзакций в секунду&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2612,7 +2612,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Latches\Latch Waits/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Latches\Ожиданий кратковременных блокировок в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2620,7 +2620,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Waits/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Ожиданий блокировок в секунду&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
@@ -2634,7 +2634,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Latches\Average Latch Wait Time (ms)&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Latches\Среднее время ожидания кратковременной блокировки (мс)&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2642,7 +2642,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Latches\Total Latch Wait Time (ms)&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Latches\Общее время ожидания кратковременной блокировки (мс)&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2650,7 +2650,7 @@ NULL</description>
                     <color>2774A4</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Average Wait Time (ms)&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Среднее время ожидания (мс)&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2658,7 +2658,7 @@ NULL</description>
                     <color>A54F10</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Wait Time (ms)&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Время ожидания блокировки (мс)&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
