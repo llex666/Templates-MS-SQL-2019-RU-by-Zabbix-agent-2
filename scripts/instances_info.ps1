@@ -1,3 +1,4 @@
+﻿#функция для приведения к формату который понимает zabbix / the function is to bring to the format understands zabbix
 $server = $env:computername  
 $object = Get-WmiObject win32_service -ComputerName $server  | where {($_.name -like "MSSQL$*" -or $_.name -like "MSSQLSERVER" -or $_.name -like "SQL Server (*") -and $_.name -notlike "*helper*" -and $_.name -notlike "*Launcher*"}
 if ($object)
