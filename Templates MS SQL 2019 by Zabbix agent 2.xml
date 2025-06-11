@@ -2375,7 +2375,7 @@ NULL</description>
                     <color>0000C8</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Коэффициент обращений к буферному кэшу&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Коэффициент попадания в кэш&quot;]</key>
                     </item>
                 </graph_item>
             </graph_items>
