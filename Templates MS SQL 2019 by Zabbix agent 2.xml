@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>6.4</version>
-    <date>2025-06-11T15:00:00Z</date>
+    <date>2025-01-01T15:00:00Z</date>
     <groups>
         <group>
             <name>Templates MS SQL</name>
