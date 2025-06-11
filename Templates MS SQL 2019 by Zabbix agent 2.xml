@@ -2590,7 +2590,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Пакетных запросов в секунду/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Пакетных запросов в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
