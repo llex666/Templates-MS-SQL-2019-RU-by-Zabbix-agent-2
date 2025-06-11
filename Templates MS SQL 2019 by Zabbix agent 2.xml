@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>5.0</version>
+    <version>1.2</version>
     <date>2023-06-23T11:44:50Z</date>
     <groups>
         <group>
-            <name>9 Templates Group</name>
+            <name>Templates MS SQL</name>
         </group>
     </groups>
     <templates>
         <template>
-            <template>Template App MS SQL 2019</template>
-            <name>Template App MS SQL 2019</name>
+            <template>Templates MS SQL 2019 by Zabbix agent 2</template>
+            <name>Templates MS SQL 2019 by Zabbix agent 2</name>
             <groups>
                 <group>
-                    <name>9 Templates Group</name>
+                    <name>Templates MS SQL</name>
                 </group>
             </groups>
             <applications>
@@ -123,15 +123,15 @@
                             <dependencies>
                                 <dependency>
                                     <name>SQL: Service State - SQL Server on {HOST.NAME}</name>
-                                    <expression>{Template App MS SQL 2019:service.info[MSSQLSERVER].last()}&lt;&gt;0</expression>
+                                    <expression>{Templates MS SQL 2019 by Zabbix agent 2:service.info[MSSQLSERVER].last()}&lt;&gt;0</expression>
                                 </dependency>
                             </dependencies>
                         </trigger>
                     </triggers>
                 </item>
                 <item>
-                    <name>SQL Server: % Processor Time</name>
-                    <key>perf_counter[&quot;\Process(sqlservr)\% Processor Time&quot;]</key>
+                    <name>SQL Server: % Загруженности процессора</name>
+                    <key>perf_counter[&quot;\Process(sqlservr)\% Загруженности процессора&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -159,7 +159,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Access Methods: Forwarded Records per second</name>
-                    <key>perf_counter[&quot;\SQLServer:Access Methods\Forwarded Records/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Access Methods\Перенаправленных записей в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -173,7 +173,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Access Methods: Full Scans/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Access Methods\Full Scans/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Access Methods\Полных операций сканирования в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -187,7 +187,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Access Methods: Index Searches/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Access Methods\Index Searches/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Access Methods\Операций поиска по индексу в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -201,7 +201,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Access Methods: Page Splits/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Access Methods\Page Splits/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Access Methods\Разбиений страниц в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -215,7 +215,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Access Methods: Work files created/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Access Methods\Workfiles Created/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Access Methods\Создано рабочих файлов в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -236,7 +236,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Access Methods: Work tables created/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Access Methods\Worktables Created/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Access Methods\Создано рабочих таблиц в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -257,7 +257,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: % Buffer cache hit ratio</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Buffer cache hit ratio&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Коэффициент обращений к буферному кэшу&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -284,7 +284,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Checkpoint pages/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Checkpoint pages/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Страниц контрольных точек в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -298,7 +298,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Database pages</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Database pages&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Страниц баз данных&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -312,7 +312,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Free list stalls/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Free list stalls/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Остановов свободного списка в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -333,7 +333,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Lazy writes/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Lazy writes/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Операций медл. записи в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -354,7 +354,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Page life expectancy</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page life expectancy&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Время без ссылки для страницы расширения&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -382,7 +382,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Page lookups/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page lookups/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Поисков страниц в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -396,7 +396,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Page reads/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page reads/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Количество операций чтения страниц в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -417,7 +417,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Page writes/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page writes/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Операций записи страниц в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -438,7 +438,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Read-ahead pages/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Readahead pages/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Предварительно прочитанных страниц в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -452,7 +452,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Buffer Manager: Target pages</name>
-                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Target pages&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Buffer Manager\Целевые страницы&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -466,7 +466,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Data File Size (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Data File(s) Size (KB)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Размер файлов данных (КБ)&quot;]</key>
                     <delay>{$SQL_SHORT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -487,7 +487,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Log File Size (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Log File(s) Size (KB)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Размер файлов журнала(КБ)&quot;]</key>
                     <delay>{$SQL_SHORT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -508,7 +508,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Log File Used Size (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Log File(s) Used Size (KB)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Используемы размер файлов журнала(КБ)&quot;]</key>
                     <delay>{$SQL_SHORT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -529,7 +529,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Transactions per second (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Transactions/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Транзакций в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <value_type>FLOAT</value_type>
@@ -542,7 +542,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Logins/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:General Statistics\Logins/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:General Statistics\Входов в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -556,7 +556,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Logouts/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:General Statistics\Logouts/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:General Statistics\Выходов в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -570,7 +570,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Number of Blocked Processes</name>
-                    <key>perf_counter[&quot;\SQLServer:General Statistics\Processes blocked&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:General Statistics\Заблокированных процессов&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -584,7 +584,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Number Users Connected</name>
-                    <key>perf_counter[&quot;\SQLServer:General Statistics\User Connections&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:General Statistics\Подключения пользователей&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -597,7 +597,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Latches: Average Latch Wait Time</name>
-                    <key>perf_counter[&quot;\SQLServer:Latches\Average Latch Wait Time (ms)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Latches\Среднее время ожидания кратковременной блокировки (мс)&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -612,7 +612,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Latches: Latch Waits/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:Latches\Latch Waits/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Latches\Ожиданий кратковременных блокировок в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -626,7 +626,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Latches: Total Latch Wait Time</name>
-                    <key>perf_counter[&quot;\SQLServer:Latches\Total Latch Wait Time (ms)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Latches\Общее время ожидания кратковременной блокировки (мс)&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -641,7 +641,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Locks: Average Wait Time (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Average Wait Time (ms)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Среднее время ожидания (мс)&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -663,7 +663,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Locks: Lock Requests/sec (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Requests/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Запросов блокировок в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -684,7 +684,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Locks: Lock Timeouts/sec (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Timeouts/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Превышений времени ожидания блокировки в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -705,7 +705,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Locks: Lock Waits per second (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Waits/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Ожиданий блокировок в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -719,7 +719,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Locks: Lock Wait Time (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Wait Time (ms)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Время ожидания блокировки (мс)&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -734,7 +734,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Locks: Number of Deadlocks/sec (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Number of Deadlocks/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Количество взаимоблокировок в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -755,7 +755,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Memory Manager: Granted Workspace Memory</name>
-                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Granted Workspace Memory (KB)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Выделено памяти рабочей области (КБ)&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -776,7 +776,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Memory Manager: Maximum Workspace Memory</name>
-                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Maximum Workspace Memory (KB)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Максимальный объем рабочей области (КБ)&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -797,7 +797,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Memory Manager: Memory Grants Outstanding</name>
-                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Memory Grants Outstanding&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Ожидается выделений памяти&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -811,7 +811,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Memory Manager: Memory Grants Pending</name>
-                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Memory Grants Pending&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Ожидается выделений памяти&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -825,7 +825,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Memory Manager: Target Server Memory</name>
-                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Target Server Memory (KB)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Память целевого сервера (КБ)&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -846,7 +846,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Memory Manager: Total Server Memory</name>
-                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Total Server Memory (KB)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Memory Manager\Общая память сервера (КБ)&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -867,7 +867,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Cache: Cache Hit Ratio</name>
-                    <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Hit Ratio&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Коэффициент попадания в кэш&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -881,7 +881,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Cache: Cache Object Counts</name>
-                    <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Object Counts&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Кол-во объектов кэша&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -895,7 +895,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Cache: Cache Objects in use</name>
-                    <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Objects in use&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Объектов кэша в использовании&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -909,7 +909,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Cache: Cache Pages</name>
-                    <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Pages&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Страниц кэша&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -923,7 +923,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Errors: Errors/sec (DB Offline Errors)</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Errors(DB Offline Errors)\Errors/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Errors(DB Offline Errors)\Ошибок в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -937,7 +937,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Errors: Errors/sec (Info Errors)</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Errors(Info Errors)\Errors/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Errors(Info Errors)\Ошибок в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -951,7 +951,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Errors: Errors/sec (Kill Connection Errors)</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Errors(Kill Connection Errors)\Errors/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Errors(Kill Connection Errors)\Ошибок в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -965,7 +965,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Errors: Errors/sec (User Errors)</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Errors(User Errors)\Errors/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Errors(User Errors)\Ошибок в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -979,7 +979,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Errors: Errors/sec (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Errors(_Total)\Errors/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Errors(_Total)\Ошибок в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -993,7 +993,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Statistics: Auto-Param Attempts/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Auto-Param Attempts/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Попыток автоматически установить параметры в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -1007,7 +1007,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Statistics: Batch Requests/Sec</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Пакетных запросов в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -1021,7 +1021,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Statistics: Failed Auto-Params/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Failed Auto-Params/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Сбойных автоматических установок параметров в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -1035,7 +1035,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Statistics: Safe Auto-Params/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Safe Auto-Params/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Безопасных автоматических параметров в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -1049,7 +1049,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Statistics: SQL Compilations/Sec</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\SQL Compilations/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Компиляций SQL в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -1063,7 +1063,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Statistics: SQL Re-Compilations/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\SQL Re-Compilations/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Рекомпиляций SQL в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -1077,7 +1077,7 @@
                 </item>
                 <item>
                     <name>SQL Server, Statistics: Unsafe Auto-Params/sec</name>
-                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Unsafe Auto-Params/sec&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:SQL Statistics\Небезопасных автоматических параметров в секунду&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -1091,7 +1091,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Transactions Number (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Transactions\Transactions&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Transactions\Транзакций&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -1464,7 +1464,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server, DB {#DBNAME}: Active Transactions</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Active Transactions&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Активные транзакции&quot;]</key>
                             <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1478,7 +1478,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server, DB {#DBNAME}: Data File Size</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Data File(s) Size (KB)&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Размер файлов данных (КБ)&quot;]</key>
                             <delay>{$SQL_SHORT_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1499,7 +1499,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server, DB {#DBNAME}: Log Bytes Flushed/sec</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Bytes Flushed/sec&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Сброшено байтов журнала в секунду&quot;]</key>
                             <delay>{$SQL_SHORT_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1514,7 +1514,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server, DB {#DBNAME}: Log File Size</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log File(s) Size (KB)&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Размер файлов журнала (КБ)&quot;]</key>
                             <delay>{$SQL_SHORT_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1535,7 +1535,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server, DB {#DBNAME}: Log File Used Size</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log File(s) Used Size (KB)&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Используемый размер файлов журнала (КБ)&quot;]</key>
                             <delay>{$SQL_SHORT_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1556,7 +1556,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server, DB {#DBNAME}: Log Flushes/sec</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flushes/sec&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Сбросов журнала в секунду&quot;]</key>
                             <delay>{$SQL_MEDIUM_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1570,7 +1570,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server, DB {#DBNAME}: Log Flush Waits/sec</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flush Waits/sec&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Ожиданий сброса журнала в секунду&quot;]</key>
                             <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1591,7 +1591,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server, DB {#DBNAME}: Log Flush Wait Time</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flush Wait Time&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Время ожидания сброса журнала&quot;]</key>
                             <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1613,7 +1613,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server, DB {#DBNAME}: Log Truncations</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Truncations&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Усечение журнала&quot;]</key>
                             <delay>{$SQL_MEDIUM_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1627,7 +1627,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server, DB {#DBNAME}: Percent Log Used</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Percent Log Used&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Процент использования журнала&quot;]</key>
                             <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1649,7 +1649,7 @@ NULL</description>
                         </item_prototype>
                         <item_prototype>
                             <name>SQL Server: DB {#DBNAME}: Transactions per second</name>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Transactions/sec&quot;]</key>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Транзакций в секунду&quot;]</key>
                             <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                             <history>{$SQL_HISTORY_PERIOD}</history>
                             <trends>{$SQL_TREND_PERIOD}</trends>
@@ -1664,12 +1664,12 @@ NULL</description>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template App MS SQL 2019:mssql.mrole[&quot;{#DBNAME}&quot;].last()}=&quot;MIRROR&quot; and {Template App MS SQL 2019:mssql.mstate[&quot;{#DBNAME}&quot;].last()}&lt;&gt;&quot;SYNCHRONIZED&quot; and {Template App MS SQL 2019:mssql.mstate[&quot;{#DBNAME}&quot;].last()}&lt;&gt;&quot;SYNCHRONIZING&quot;</expression>
+                            <expression>{Templates MS SQL 2019 by Zabbix agent 2:mssql.mrole[&quot;{#DBNAME}&quot;].last()}=&quot;MIRROR&quot; and {Templates MS SQL 2019 by Zabbix agent 2:mssql.mstate[&quot;{#DBNAME}&quot;].last()}&lt;&gt;&quot;SYNCHRONIZED&quot; and {Templates MS SQL 2019 by Zabbix agent 2:mssql.mstate[&quot;{#DBNAME}&quot;].last()}&lt;&gt;&quot;SYNCHRONIZING&quot;</expression>
                             <name>SQLServer:Databases: {#DBNAME} MIRROR not SYNCHRONIZED</name>
                             <priority>AVERAGE</priority>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App MS SQL 2019:mssql.mrole[&quot;{#DBNAME}&quot;].last()}=&quot;PRINCIPAL&quot; and {Template App MS SQL 2019:mssql.mstate[&quot;{#DBNAME}&quot;].last()}&lt;&gt;&quot;SYNCHRONIZED&quot; and {Template App MS SQL 2019:mssql.mstate[&quot;{#DBNAME}&quot;].last()}&lt;&gt;&quot;SYNCHRONIZING&quot;</expression>
+                            <expression>{Templates MS SQL 2019 by Zabbix agent 2:mssql.mrole[&quot;{#DBNAME}&quot;].last()}=&quot;PRINCIPAL&quot; and {Templates MS SQL 2019 by Zabbix agent 2:mssql.mstate[&quot;{#DBNAME}&quot;].last()}&lt;&gt;&quot;SYNCHRONIZED&quot; and {Templates MS SQL 2019 by Zabbix agent 2:mssql.mstate[&quot;{#DBNAME}&quot;].last()}&lt;&gt;&quot;SYNCHRONIZING&quot;</expression>
                             <name>SQLServer:Databases: {#DBNAME} PRINCIPAL not SYNCHRONIZED</name>
                             <priority>AVERAGE</priority>
                         </trigger_prototype>
@@ -1947,27 +1947,27 @@ NULL</description>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_type].last()}=4 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_interval].last()}=1 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_subday_type].last()}=8 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_subday_interval].last()}=1 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},last_run_timestamp].fuzzytime(86400)}=0</expression>
+                            <expression>{Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_type].last()}=4 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_interval].last()}=1 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_subday_type].last()}=8 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_subday_interval].last()}=1 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},last_run_timestamp].fuzzytime(86400)}=0</expression>
                             <name>Job {#JOBNAME} Last Run was more than a 1 HOUR ago</name>
                             <priority>AVERAGE</priority>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_type].last()}=4 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_interval].last()}=1 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_subday_type].last()}=8 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_subday_interval].last()}=2 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},last_run_timestamp].fuzzytime(86400)}=0</expression>
+                            <expression>{Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_type].last()}=4 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_interval].last()}=1 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_subday_type].last()}=8 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_subday_interval].last()}=2 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},last_run_timestamp].fuzzytime(86400)}=0</expression>
                             <name>Job {#JOBNAME} Last Run was more than a 2 HOURS ago</name>
                             <priority>AVERAGE</priority>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>({Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_type].last()}=16 or  {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_type].last()}=32) and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},last_run_timestamp].fuzzytime(2764800)}=0</expression>
+                            <expression>({Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_type].last()}=16 or  {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_type].last()}=32) and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},last_run_timestamp].fuzzytime(2764800)}=0</expression>
                             <name>Job {#JOBNAME} Last Run was more than a MONTH ago</name>
                             <priority>AVERAGE</priority>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_type].last()}=8 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},last_run_timestamp].fuzzytime(777600)}=0</expression>
+                            <expression>{Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_type].last()}=8 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},last_run_timestamp].fuzzytime(777600)}=0</expression>
                             <name>Job {#JOBNAME} Last Run was more than a WEEK ago</name>
                             <priority>AVERAGE</priority>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_type].last()}=4 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_interval].last()}=1 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},schedule_subday_type].last()}=1 and {Template App MS SQL 2019:mssql.job.info[{#JOBNAME},last_run_timestamp].fuzzytime(172800)}=0</expression>
+                            <expression>{Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_type].last()}=4 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_interval].last()}=1 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},schedule_subday_type].last()}=1 and {Templates MS SQL 2019 by Zabbix agent 2:mssql.job.info[{#JOBNAME},last_run_timestamp].fuzzytime(172800)}=0</expression>
                             <name>Job {#JOBNAME} Last Run was more than ONE DAY ago</name>
                             <priority>AVERAGE</priority>
                         </trigger_prototype>
@@ -2095,13 +2095,13 @@ NULL</description>
     </templates>
     <triggers>
         <trigger>
-            <expression>{Template App MS SQL 2019:perf_counter[&quot;\SQLServer:Access Methods\Forwarded Records/sec&quot;].last()}&gt;{Template App MS SQL 2019:perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/sec&quot;].last()}/10</expression>
+            <expression>{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:Access Methods\Forwarded Records/sec&quot;].last()}&gt;{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/sec&quot;].last()}/10</expression>
             <name>SQL Server, Access Methods: Forwarded Records/sec on {HOST.NAME}</name>
             <status>DISABLED</status>
             <priority>AVERAGE</priority>
         </trigger>
         <trigger>
-            <expression>{Template App MS SQL 2019:perf_counter[&quot;\SQLServer:Access Methods\Page Splits/sec&quot;].last()}&gt;{Template App MS SQL 2019:perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/sec&quot;].last()}/5</expression>
+            <expression>{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:Access Methods\Page Splits/sec&quot;].last()}&gt;{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/sec&quot;].last()}/5</expression>
             <name>SQL Server, Access Methods: Page Splits/Sec on {HOST.NAME}</name>
             <status>DISABLED</status>
             <priority>AVERAGE</priority>
@@ -2116,7 +2116,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Database pages&quot;]</key>
                     </item>
                 </graph_item>
@@ -2124,7 +2124,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Target pages&quot;]</key>
                     </item>
                 </graph_item>
@@ -2138,7 +2138,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page life expectancy&quot;]</key>
                     </item>
                 </graph_item>
@@ -2152,7 +2152,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page lookups/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2160,7 +2160,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page reads/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2168,7 +2168,7 @@ NULL</description>
                     <sortorder>2</sortorder>
                     <color>0000C8</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Page writes/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2176,7 +2176,7 @@ NULL</description>
                     <sortorder>3</sortorder>
                     <color>C800C8</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Readahead pages/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2184,7 +2184,7 @@ NULL</description>
                     <sortorder>4</sortorder>
                     <color>FC6EA3</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Checkpoint pages/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2192,7 +2192,7 @@ NULL</description>
                     <sortorder>5</sortorder>
                     <color>6C59DC</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Free list stalls/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2200,7 +2200,7 @@ NULL</description>
                     <sortorder>6</sortorder>
                     <color>AC8C14</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Lazy writes/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2214,7 +2214,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Statistics\Auto-Param Attempts/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2222,7 +2222,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Statistics\Failed Auto-Params/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2230,7 +2230,7 @@ NULL</description>
                     <sortorder>2</sortorder>
                     <color>0000C8</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Statistics\Safe Auto-Params/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2238,7 +2238,7 @@ NULL</description>
                     <sortorder>3</sortorder>
                     <color>C800C8</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Statistics\Unsafe Auto-Params/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2252,7 +2252,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Access Methods\Forwarded Records/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2260,7 +2260,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>F63100</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Access Methods\Full Scans/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2268,7 +2268,7 @@ NULL</description>
                     <sortorder>2</sortorder>
                     <color>2774A4</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Access Methods\Index Searches/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2276,7 +2276,7 @@ NULL</description>
                     <sortorder>3</sortorder>
                     <color>A54F10</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Access Methods\Page Splits/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2284,7 +2284,7 @@ NULL</description>
                     <sortorder>4</sortorder>
                     <color>FC6EA3</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Access Methods\Workfiles Created/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2292,7 +2292,7 @@ NULL</description>
                     <sortorder>5</sortorder>
                     <color>6C59DC</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Access Methods\Worktables Created/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2306,7 +2306,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Object Counts&quot;]</key>
                     </item>
                 </graph_item>
@@ -2314,7 +2314,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Objects in use&quot;]</key>
                     </item>
                 </graph_item>
@@ -2322,7 +2322,7 @@ NULL</description>
                     <sortorder>2</sortorder>
                     <color>2774A4</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Pages&quot;]</key>
                     </item>
                 </graph_item>
@@ -2336,7 +2336,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Statistics\SQL Compilations/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2344,7 +2344,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Statistics\SQL Re-Compilations/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2358,7 +2358,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Buffer Manager\Buffer cache hit ratio&quot;]</key>
                     </item>
                 </graph_item>
@@ -2366,7 +2366,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\Process(sqlservr)\% Processor Time&quot;]</key>
                     </item>
                 </graph_item>
@@ -2374,7 +2374,7 @@ NULL</description>
                     <sortorder>2</sortorder>
                     <color>0000C8</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Plan Cache(_Total)\Cache Hit Ratio&quot;]</key>
                     </item>
                 </graph_item>
@@ -2388,7 +2388,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Errors(_Total)\Errors/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2396,7 +2396,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Errors(DB Offline Errors)\Errors/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2404,7 +2404,7 @@ NULL</description>
                     <sortorder>2</sortorder>
                     <color>0000C8</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Errors(Info Errors)\Errors/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2412,7 +2412,7 @@ NULL</description>
                     <sortorder>3</sortorder>
                     <color>C800C8</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Errors(Kill Connection Errors)\Errors/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2420,7 +2420,7 @@ NULL</description>
                     <sortorder>4</sortorder>
                     <color>00C8C8</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Errors(User Errors)\Errors/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2434,7 +2434,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Requests/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2442,7 +2442,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Timeouts/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2450,7 +2450,7 @@ NULL</description>
                     <sortorder>2</sortorder>
                     <color>0000C8</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Number of Deadlocks/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2464,7 +2464,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:General Statistics\Logins/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2472,7 +2472,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:General Statistics\Logouts/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2485,7 +2485,7 @@ NULL</description>
                 <graph_item>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Memory Manager\Memory Grants Outstanding&quot;]</key>
                     </item>
                 </graph_item>
@@ -2493,7 +2493,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Memory Manager\Memory Grants Pending&quot;]</key>
                     </item>
                 </graph_item>
@@ -2507,7 +2507,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>proc_info[sqlservr.exe,pf,sum]</key>
                     </item>
                 </graph_item>
@@ -2521,7 +2521,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:General Statistics\Processes blocked&quot;]</key>
                     </item>
                 </graph_item>
@@ -2535,7 +2535,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Memory Manager\Target Server Memory (KB)&quot;]</key>
                     </item>
                 </graph_item>
@@ -2543,7 +2543,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Memory Manager\Total Server Memory (KB)&quot;]</key>
                     </item>
                 </graph_item>
@@ -2551,7 +2551,7 @@ NULL</description>
                     <sortorder>2</sortorder>
                     <color>0000C8</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>proc_info[sqlservr.exe,vmsize,sum]</key>
                     </item>
                 </graph_item>
@@ -2559,7 +2559,7 @@ NULL</description>
                     <sortorder>3</sortorder>
                     <color>A54F10</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>proc_info[sqlservr.exe,wkset,sum]</key>
                     </item>
                 </graph_item>
@@ -2567,7 +2567,7 @@ NULL</description>
                     <sortorder>4</sortorder>
                     <color>FC6EA3</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Memory Manager\Granted Workspace Memory (KB)&quot;]</key>
                     </item>
                 </graph_item>
@@ -2575,7 +2575,7 @@ NULL</description>
                     <sortorder>5</sortorder>
                     <color>6C59DC</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Memory Manager\Maximum Workspace Memory (KB)&quot;]</key>
                     </item>
                 </graph_item>
@@ -2589,7 +2589,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2597,7 +2597,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Transactions/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2611,7 +2611,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Latches\Latch Waits/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2619,7 +2619,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Waits/sec&quot;]</key>
                     </item>
                 </graph_item>
@@ -2633,7 +2633,7 @@ NULL</description>
                     <drawtype>GRADIENT_LINE</drawtype>
                     <color>00C800</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Latches\Average Latch Wait Time (ms)&quot;]</key>
                     </item>
                 </graph_item>
@@ -2641,7 +2641,7 @@ NULL</description>
                     <sortorder>1</sortorder>
                     <color>C80000</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Latches\Total Latch Wait Time (ms)&quot;]</key>
                     </item>
                 </graph_item>
@@ -2649,7 +2649,7 @@ NULL</description>
                     <sortorder>2</sortorder>
                     <color>2774A4</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Average Wait Time (ms)&quot;]</key>
                     </item>
                 </graph_item>
@@ -2657,7 +2657,7 @@ NULL</description>
                     <sortorder>3</sortorder>
                     <color>A54F10</color>
                     <item>
-                        <host>Template App MS SQL 2019</host>
+                        <host>Templates MS SQL 2019 by Zabbix agent 2</host>
                         <key>perf_counter[&quot;\SQLServer:Locks(_Total)\Lock Wait Time (ms)&quot;]</key>
                     </item>
                 </graph_item>
