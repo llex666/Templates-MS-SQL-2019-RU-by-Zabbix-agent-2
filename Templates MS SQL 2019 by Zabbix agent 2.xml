@@ -487,7 +487,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Log File Size (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Размер файлов журнала(КБ)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Размер файлов журнала (КБ)&quot;]</key>
                     <delay>{$SQL_SHORT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -508,7 +508,7 @@
                 </item>
                 <item>
                     <name>SQL Server: Log File Used Size (Total)</name>
-                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Используемы размер файлов журнала(КБ)&quot;]</key>
+                    <key>perf_counter[&quot;\SQLServer:Databases(_Total)\Используемы размер файлов журнала (КБ)&quot;]</key>
                     <delay>{$SQL_SHORT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
