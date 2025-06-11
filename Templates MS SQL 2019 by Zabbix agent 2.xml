@@ -131,7 +131,7 @@
                 </item>
                 <item>
                     <name>SQL Server: % Загруженности процессора</name>
-                    <key>perf_counter[&quot;\Process(sqlservr)\% Загруженности процессора&quot;]</key>
+                    <key>perf_counter[&quot;\Процесс(sqlservr)\% загруженности процессора&quot;]</key>
                     <delay>{$SQL_HOT_REQUEST_PERIOD}</delay>
                     <history>30d</history>
                     <trends>180d</trends>
@@ -2367,7 +2367,7 @@ NULL</description>
                     <color>C80000</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\Process(sqlservr)\% Загруженности процессора&quot;]</key>
+                        <key>perf_counter[&quot;\Процесс(sqlservr)\% загруженности процессора&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
