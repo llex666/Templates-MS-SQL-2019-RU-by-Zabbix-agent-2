@@ -2095,13 +2095,13 @@ NULL</description>
     </templates>
     <triggers>
         <trigger>
-            <expression>{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:Access Methods\Forwarded Records/sec&quot;].last()}&gt;{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/sec&quot;].last()}/10</expression>
+            <expression>{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:Access Methods\Перенаправленных записей в секунду&quot;].last()}&gt;{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:SQL Statistics\Пакетных запросов в секунду/sec&quot;].last()}/10</expression>
             <name>SQL Server, Access Methods: Forwarded Records/sec on {HOST.NAME}</name>
             <status>DISABLED</status>
             <priority>AVERAGE</priority>
         </trigger>
         <trigger>
-            <expression>{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:Access Methods\Page Splits/sec&quot;].last()}&gt;{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/sec&quot;].last()}/5</expression>
+            <expression>{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:Access Methods\Page Splits/sec&quot;].last()}&gt;{Templates MS SQL 2019 by Zabbix agent 2:perf_counter[&quot;\SQLServer:SQL Statistics\Пакетных запросов в секунду/sec&quot;].last()}/5</expression>
             <name>SQL Server, Access Methods: Page Splits/Sec on {HOST.NAME}</name>
             <status>DISABLED</status>
             <priority>AVERAGE</priority>
@@ -2253,7 +2253,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:Access Methods\Forwarded Records/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:Access Methods\Перенаправленных записей в секунду&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
@@ -2590,7 +2590,7 @@ NULL</description>
                     <color>00C800</color>
                     <item>
                         <host>Templates MS SQL 2019 by Zabbix agent 2</host>
-                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/sec&quot;]</key>
+                        <key>perf_counter[&quot;\SQLServer:SQL Statistics\Пакетных запросов в секунду/sec&quot;]</key>
                     </item>
                 </graph_item>
                 <graph_item>
